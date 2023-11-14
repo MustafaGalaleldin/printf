@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <stdlib.h>
 /**
  * hxh_m_hexa - print eq hexa
  * @type: list ptr
