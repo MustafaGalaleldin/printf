@@ -75,6 +75,7 @@ int hxh_Str(va_list *ptr, int *count)
 		{
 			_mchar('\\');
 			_mchar('x');
+			(*count) += 2;
 			hex(x[j], count);
 		}
 	}
