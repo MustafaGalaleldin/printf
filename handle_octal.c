@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 /**
  * hxh_octal - print in octal
  * @type: list ptr
