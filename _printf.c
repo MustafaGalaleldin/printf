@@ -11,12 +11,6 @@ int _printf(const char *format, ...)
 
 	if (!format)
 		return (-1);
-	if (!format[i] && !i)
-	{
-		_mchar('\0');
-		count++;
-		return (count);
-	}
 	va_start(ar, format);
 	while (format[i])
 	{
