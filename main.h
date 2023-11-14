@@ -24,6 +24,7 @@ int hxh_address(va_list *type, int *count);
 void examine_hxh_m_hexa(int d, char *ptr);
 void examine_hxh_M_hexa(int d, char *ptr);
 int hxh_rot13(va_list *type, int *count);
+int hxh_rev(va_list *type, int *count);
 /**
  * struct functions - functions structure
  * @specifier: char specifier

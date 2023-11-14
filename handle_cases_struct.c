@@ -24,6 +24,7 @@ int handle_case(char format, va_list *type, int *count, int i, const char *s)
 	{'S', hxh_Str},
 	{'R', hxh_rot13},
 	{'p', hxh_address},
+	{'r', hxh_rev}
 	};
 
 	for (j = 0; j < sizeof(specifiers) / sizeof(specifiers[0]); j++)
@@ -31,8 +32,7 @@ int handle_case(char format, va_list *type, int *count, int i, const char *s)
 		if (specifiers[j].specifier == format)
 		{
 			specifiers[j].handler(type, count);
-			return (*count);
-		}
+			return (*count); }
 	}
 	switch (format)
 	{
