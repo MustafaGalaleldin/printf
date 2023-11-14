@@ -28,6 +28,8 @@ int _printf(const char *format, ...)
 			continue;
 		}
 		i++;
+		if (!format[i])
+			return (-1);
 		handle_case(format[i], &ar, &count, i, format);
 		i++;
 	}
