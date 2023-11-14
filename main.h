@@ -12,7 +12,6 @@ int hxh_str(va_list *type, int *count);
 int hxh_binary(va_list *type, int *count);
 int hxh_int(va_list *type, int *count);
 int hxh_octal(va_list *type, int *count);
-int hxh_print_number(int n, int *count);
 int hxh_m_hexa(va_list *type, int *count);
 int hxh_M_hexa(va_list *type, int *count);
 int hxh_unsigned(va_list *type, int *count);
