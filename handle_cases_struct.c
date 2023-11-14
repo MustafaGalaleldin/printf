@@ -22,7 +22,8 @@ int handle_case(char format, va_list *type, int *count, int i, const char *s)
 	{'X', hxh_M_hexa},
 	{'u', hxh_unsigned},
 	{'S', hxh_Str},
-	{'R', hxh_rot13}
+	{'R', hxh_rot13},
+	{'p', hxh_address},
 	};
 
 	for (j = 0; j < sizeof(specifiers) / sizeof(specifiers[0]); j++)
