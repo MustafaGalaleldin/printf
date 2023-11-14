@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <stddef.h>
+
 int _mchar(char c);
 int _printf(const char *format, ...);
 int handle_case(char format, va_list *type, int *count, int i, const char *s);
