@@ -1,7 +1,9 @@
 #include "main.h"
+#include <stdarg.h>
+#include <stdlib.h>
 /**
  * hxh_m_hexa - print eq hexa
- * @type: list of arguments
+ * @type: list ptr
  * @count: ptr
  * Return: nothing
  */
@@ -10,7 +12,10 @@ int hxh_m_hexa(va_list *type, int *count)
 	int size, d, i;
 	unsigned int n, m;
 	char *ap;
+	char c;
+	void (*examine_m)(int, char *);
 
+	examine_m = examine_hxh_m_hexa;
 	size = 0;
 	n = va_arg(*type, unsigned int);
 	m = n;
@@ -28,29 +33,8 @@ int hxh_m_hexa(va_list *type, int *count)
 		d = m % 16;
 		if (d > 9)
 		{
-			switch (d)
-			{
-				case 10:
-					ap[i] = 'a';
-					break;
-				case 11:
-					ap[i] = 'b';
-					break;
-				case 12:
-					ap[i] = 'c';
-					break;
-				case 13:
-					ap[i] = 'd';
-					break;
-				case 14:
-					ap[i] = 'e';
-					break;
-				case 15:
-					ap[i] = 'f';
-					break;
-				default:
-				break;
-			}
+			examine_m(d, &c);
+			ap[i] = c;
 		}
 		else
 			ap[i] = d + '0';
@@ -75,7 +59,10 @@ int hxh_M_hexa(va_list *type, int *count)
 	int size, d, i;
 	unsigned int n, m;
 	char *ap;
+	char r;
+	void (*examine_M)(int, char *);
 
+	examine_M = examine_hxh_M_hexa;
 	size = 0;
 	n = va_arg(*type, unsigned int);
 	m = n;
@@ -93,29 +80,8 @@ int hxh_M_hexa(va_list *type, int *count)
 		d = m % 16;
 		if (d > 9)
 		{
-			switch (d)
-			{
-				case 10:
-					ap[i] = 'A';
-					break;
-				case 11:
-					ap[i] = 'B';
-					break;
-				case 12:
-					ap[i] = 'C';
-					break;
-				case 13:
-					ap[i] = 'D';
-					break;
-				case 14:
-					ap[i] = 'E';
-					break;
-				case 15:
-					ap[i] = 'F';
-					break;
-				default:
-					break;
-			}
+			examine_M(d, &r);
+			ap[i] = r;
 		}
 		else
 			ap[i] = d + '0';

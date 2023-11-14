@@ -17,6 +17,8 @@ int hxh_M_hexa(va_list *type, int *count);
 int hxh_unsigned(va_list *type, int *count);
 int hxh_print_unsign(unsigned int n, int *count);
 int hxh_Str(va_list *ptr, int *count);
+void examine_hxh_m_hexa(int d, char *ptr);
+void examine_hxh_M_hexa(int d, char *ptr);
 /**
  * struct functions - functions structure
  * @specifier: char specifier
