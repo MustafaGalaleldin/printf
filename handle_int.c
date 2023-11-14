@@ -20,7 +20,6 @@ int hxh_print_number(int n, int *count)
 
 	if (n1 / 10 != 0)
 	{
-		(*count)++;
 		hxh_print_number(n1 / 10, count);
 	}
 	_mchar((n1 % 10) + '0');
