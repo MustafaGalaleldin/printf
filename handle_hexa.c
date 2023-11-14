@@ -45,7 +45,6 @@ int hxh_m_hexa(va_list *type, int *count)
 	return (*count);
 	free(ap);
 }
-#include "main.h"
 /**
  * hxh_M_hexa - print eq hexa
  * @type: list ptr
