@@ -19,6 +19,7 @@ int hxh_print_unsign(unsigned int n, int *count);
 int hxh_Str(va_list *ptr, int *count);
 void examine_hxh_m_hexa(int d, char *ptr);
 void examine_hxh_M_hexa(int d, char *ptr);
+int hxh_rot13(va_list *type, int *count);
 /**
  * struct functions - functions structure
  * @specifier: char specifier
